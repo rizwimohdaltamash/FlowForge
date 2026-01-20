@@ -1,13 +1,7 @@
 # 🔧 FlowForge
 
 <div align="center">
-
 **A no-code visual automation engine built with Blockly**
-
-*Drag. Connect. Automate. Execute.*
-
-![FlowForge Banner](https://via.placeholder.com/800x200/667eea/ffffff?text=FlowForge+Visual+Automation+Engine)
-
 </div>
 
 ---
@@ -580,9 +574,5 @@ in the Software without restriction.
 <div align="center">
 
 **Built with ❤️ for the no-code community**
-
-⭐ Star this repo if FlowForge helps you! ⭐
-
-[🚀 Live Demo](#) | [📖 Documentation](#) | [🤝 Contribute](#)
 
 </div>
