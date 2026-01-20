@@ -1,11 +1,5 @@
 # 🔧 FlowForge
 
-<div align="center">
-**A no-code visual automation engine built with Blockly**
-</div>
-
----
-
 ## 📖 Overview
 
 **FlowForge** is a powerful, browser-based visual automation engine that empowers users to create executable workflows without writing code. Built on Google's Blockly framework, it provides an intuitive drag-and-drop interface for designing automation logic that generates clean, executable JavaScript in real-time.
