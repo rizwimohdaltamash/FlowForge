@@ -1,0 +1,26 @@
+{
+  "name": "flowforge",
+  "version": "1.0.0",
+  "description": "A no-code visual automation engine built with Blockly",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "blockly",
+    "visual-programming",
+    "no-code",
+    "automation",
+    "workflow",
+    "javascript",
+    "es6"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/flowforge.git"
+  },
+  "homepage": "https://github.com/yourusername/flowforge#readme"
+}

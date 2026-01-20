@@ -1,0 +1,586 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #333;
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 1.8rem;
+    color: #ffffff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+/* Font Awesome icon styling in buttons */
+.nav-btn i {
+    margin-right: 6px;
+}
+
+.brand-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.brand-tagline {
+    font-size: 0.85rem;
+    color: #999999;
+    font-weight: 400;
+    padding-left: 12px;
+    border-left: 2px solid #444;
+    margin: 0;
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+.nav-btn-primary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.nav-btn-primary:hover {
+    background: #f0f0f0;
+}
+
+.nav-btn-success {
+    background: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.nav-btn-success:hover {
+    background: #3d3d3d;
+    border-color: #555;
+}
+
+.nav-btn-danger {
+    background: transparent;
+    color: #999;
+    border: 1px solid #444;
+}
+
+.nav-btn-danger:hover {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #666;
+}
+
+.nav-btn-secondary {
+    background: #333;
+    color: #ccc;
+    border: 1px solid #555;
+}
+
+.nav-btn-secondary:hover {
+    background: #444;
+    color: #fff;
+    border-color: #777;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    padding: 16px;
+    background: #0a0a0a;
+}
+
+/* Blockly Workspace Section (68%) */
+.workspace-section {
+    flex: 0 0 68%;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #1a1a1a;
+    min-height: 0;
+}
+
+#blocklyDiv {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Blockly Toolbox Category Labels - Force Black Text */
+.blocklyTreeLabel,
+.blocklyTreeRow,
+.blocklyFlyoutLabelText {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    fill: #000000 !important;
+}
+
+.blocklyTreeRow:hover {
+    color: #000000 !important;
+}
+
+/* Force all text in Blockly toolbox to be black */
+.blocklyToolboxDiv text,
+.blocklyFlyout text {
+    fill: #000000 !important;
+}
+
+/* Specific targeting for category labels */
+.blocklyTreeLabel>span,
+.blocklyTreeRow>span {
+    color: #000000 !important;
+}
+
+/* SVG text elements in toolbox */
+.blocklyToolboxDiv svg text {
+    fill: #000000 !important;
+}
+
+/* Category text specifically */
+.blocklyTreeRow .blocklyTreeLabel {
+    color: #000000 !important;
+}
+
+/* Block text (on the actual blocks) should be LIGHT BLACK */
+.blocklyText,
+.blocklyEditableText,
+.blocklyNonEditableText {
+    fill: #2d2d2d !important;
+}
+
+/* Workspace blocks text light black */
+#blocklyDiv .blocklyText {
+    fill: #2d2d2d !important;
+}
+
+/* Input fields on blocks */
+.blocklyEditableText>text,
+.blocklyNonEditableText>text {
+    fill: #2d2d2d !important;
+}
+
+/* ========================================
+   COLORFUL TOOLBOX CATEGORIES
+   ======================================== */
+
+/* Style all category rows with rounded corners and padding */
+.blocklyTreeRow {
+    border-radius: 8px !important;
+    margin: 4px 8px !important;
+    padding: 10px 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Triggers Category - Vibrant Red */
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(1),
+.blocklyTreeRow:nth-of-type(1),
+div.blocklyTreeRow:first-child {
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%) !important;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(1):hover,
+.blocklyTreeRow:nth-of-type(1):hover,
+div.blocklyTreeRow:first-child:hover {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%) !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.5) !important;
+    transform: translateX(4px) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(1) .blocklyTreeLabel,
+.blocklyTreeRow:nth-of-type(1) .blocklyTreeLabel,
+div.blocklyTreeRow:first-child .blocklyTreeLabel {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Variables Category - Vibrant Sky Blue */
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(2) {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%) !important;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(2):hover {
+    background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.5) !important;
+    transform: translateX(4px) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(2) .blocklyTreeLabel {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Logic Category - Vibrant Indigo */
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(3) {
+    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%) !important;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(3):hover {
+    background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%) !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5) !important;
+    transform: translateX(4px) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(3) .blocklyTreeLabel {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Transform Category - Vibrant Teal */
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(4) {
+    background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
+    box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(4):hover {
+    background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%) !important;
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.5) !important;
+    transform: translateX(4px) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(4) .blocklyTreeLabel {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Timing Category - Vibrant Amber */
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(5) {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(5):hover {
+    background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5) !important;
+    transform: translateX(4px) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(5) .blocklyTreeLabel {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Output Category - Vibrant Emerald */
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(6) {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(6):hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+    transform: translateX(4px) !important;
+}
+
+.blocklyToolboxDiv>.blocklyTreeRow:nth-child(6) .blocklyTreeLabel {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Active/Selected category styling */
+.blocklyTreeRow.blocklyTreeSelected {
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+
+/* Right Panel (32%) */
+.right-panel {
+    flex: 0 0 calc(32% - 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 0;
+}
+
+/* Section Headers */
+.section-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    padding: 14px 18px;
+    border-radius: 8px 8px 0 0;
+    flex-shrink: 0;
+    border-bottom: 2px solid #000;
+}
+
+.section-header h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Code Preview Section */
+.code-section {
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: 1px solid #2d2d2d;
+    overflow: hidden;
+}
+
+#codePreview {
+    flex: 1;
+    margin: 0;
+    padding: 18px;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.85rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0 0 8px 8px;
+    min-height: 0;
+    line-height: 1.6;
+}
+
+#codePreview code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #c9d1d9;
+}
+
+/* Output Section */
+.output-section {
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: 1px solid #2d2d2d;
+    overflow: hidden;
+}
+
+#outputPanel {
+    flex: 1;
+    padding: 18px;
+    background: #0d1117;
+    border-radius: 0 0 8px 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    color: #c9d1d9;
+    min-height: 0;
+}
+
+/* Output Messages */
+.output-log {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #161b22;
+    border-left: 3px solid #58a6ff;
+}
+
+.output-error {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #2d1517;
+    border-left: 3px solid #f85149;
+    color: #ffa198;
+}
+
+.output-success {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #1b2e1f;
+    border-left: 3px solid #56d364;
+    color: #7ee787;
+}
+
+/* Scrollbar Styling */
+#codePreview::-webkit-scrollbar,
+#outputPanel::-webkit-scrollbar {
+    width: 8px;
+}
+
+#codePreview::-webkit-scrollbar-track,
+#outputPanel::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+#codePreview::-webkit-scrollbar-thumb,
+#outputPanel::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+}
+
+#codePreview::-webkit-scrollbar-thumb:hover,
+#outputPanel::-webkit-scrollbar-thumb:hover {
+    background: #484f58;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .brand-tagline {
+        display: none;
+    }
+
+    .navbar-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .workspace-section {
+        flex: 0 0 55%;
+    }
+
+    .right-panel {
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .code-section,
+    .output-section {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 16px;
+    }
+
+    .brand-name {
+        font-size: 1.3rem;
+    }
+
+    .navbar-actions {
+        gap: 8px;
+    }
+
+    .nav-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .workspace-section {
+        flex: 0 0 45%;
+    }
+
+    .right-panel {
+        flex-direction: column;
+    }
+
+    .main-content {
+        gap: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-icon {
+        font-size: 1.4rem;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .navbar-actions {
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        flex: 1;
+        min-width: 80px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .section-header h2 {
+        font-size: 0.8rem;
+    }
+}

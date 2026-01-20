@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowForge - Visual Automation Engine</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Devicons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Font Awesome for UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Blockly CDN -->
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <i class="fa-solid fa-diagram-project brand-icon"></i>
+                <span class="brand-name">FlowForge</span>
+                <span class="brand-tagline">Visual Automation Engine</span>
+            </div>
+            <div class="navbar-actions">
+                <button id="generateBtn" class="nav-btn nav-btn-primary"><i class="fa-solid fa-bolt"></i>
+                    Generate</button>
+                <button id="runBtn" class="nav-btn nav-btn-success"><i class="fa-solid fa-play"></i> Run</button>
+                <button id="clearBtn" class="nav-btn nav-btn-danger"><i class="fa-solid fa-trash"></i> Clear</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Blockly Workspace (70%) -->
+            <div class="workspace-section">
+                <div class="section-header">
+                    <h2>Visual Workflow</h2>
+                </div>
+                <div id="blocklyDiv"></div>
+            </div>
+
+            <!-- Right Panel (30%) -->
+            <div class="right-panel">
+                <!-- Code Preview -->
+                <div class="code-section">
+                    <div class="section-header">
+                        <h2>Generated Code</h2>
+                    </div>
+                    <pre id="codePreview"><code>// Your generated code will appear here...
+// Drag blocks from the toolbox to create your workflow!</code></pre>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="output-section">
+                    <div class="section-header">
+                        <h2>Output</h2>
+                    </div>
+                    <div id="outputPanel">✨ Ready to execute...
+
+                        Drag blocks to the workspace, click Generate, then Run!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blockly Toolbox XML (invisible) -->
+    <xml id="toolbox" style="display: none">
+        <category name="Triggers" colour="#EF4444">
+            <block type="trigger_start"></block>
+        </category>
+        <category name="Variables" colour="#0EA5E9">
+            <block type="set_variable"></block>
+        </category>
+        <category name="Logic" colour="#6366F1">
+            <block type="condition"></block>
+        </category>
+        <category name="Transform" colour="#14B8A6">
+            <block type="transform"></block>
+        </category>
+        <category name="Timing" colour="#F59E0B">
+            <block type="delay"></block>
+        </category>
+        <category name="Output" colour="#10B981">
+            <block type="output"></block>
+        </category>
+    </xml>
+
+    <!-- Scripts -->
+    <script src="blocks.js"></script>
+    <script src="generator.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

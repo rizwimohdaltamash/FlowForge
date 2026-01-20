@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowForge - Quick Start Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .workflow {
+            background: #f8f9fa;
+            border-left: 4px solid #2ecc71;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .workflow h3 {
+            color: #2ecc71;
+            margin-bottom: 10px;
+        }
+
+        .block-list {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .output {
+            background: #1e1e1e;
+            color: #2ecc71;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 30px auto;
+            display: block;
+            width: fit-content;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .step {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .step strong {
+            color: #2196f3;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 FlowForge</h1>
+        <p class="subtitle">Visual Automation Engine - Quick Start Guide</p>
+
+        <h2>🚀 Getting Started</h2>
+        <div class="step">
+            <strong>Step 1:</strong> Open <code>index.html</code> in your web browser
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Drag blocks from the left toolbox to the workspace
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Click <strong>Generate Code</strong> to see JavaScript
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Click <strong>Run</strong> to execute your workflow
+        </div>
+        <div class="step">
+            <strong>Step 5:</strong> View results in the Output panel
+        </div>
+
+        <h2>✨ Available Blocks</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Trigger</h3>
+                <p>Start point for every workflow</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📦</div>
+                <h3>Set Variable</h3>
+                <p>Create and assign values</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔀</div>
+                <h3>Condition</h3>
+                <p>If/Else logic flow</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔄</div>
+                <h3>Transform</h3>
+                <p>Modify variable values</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⏱️</div>
+                <h3>Delay</h3>
+                <p>Wait for X seconds</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Output</h3>
+                <p>Display messages</p>
+            </div>
+        </div>
+
+        <h2>📝 Example Workflows</h2>
+
+        <div class="workflow">
+            <h3>Example 1: Simple Counter</h3>
+            <div class="block-list">
+                🚀 When App Starts<br>
+                ├─ 📦 Set variable "count" to 0<br>
+                ├─ 🔄 Transform count (add 1)<br>
+                ├─ 🔄 Transform count (multiply by 2)<br>
+                └─ 💬 Display count
+            </div>
+            <div class="output">Output: 2</div>
+        </div>
+
+        <div class="workflow">
+            <h3>Example 2: Text Transformer</h3>
+            <div class="block-list">
+                🚀 When App Starts<br>
+                ├─ 📦 Set variable "name" to "hello"<br>
+                ├─ 🔄 Transform name (to uppercase)<br>
+                └─ 💬 Display name
+            </div>
+            <div class="output">Output: HELLO</div>
+        </div>
+
+        <div class="workflow">
+            <h3>Example 3: Conditional Logic</h3>
+            <div class="block-list">
+                🚀 When App Starts<br>
+                ├─ 📦 Set variable "score" to 85<br>
+                └─ 🔀 If score >= 80<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;├─ Then: 💬 Display "Passed!"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;└─ Else: 💬 Display "Try again"
+            </div>
+            <div class="output">Output: Passed!</div>
+        </div>
+
+        <div class="workflow">
+            <h3>Example 4: Complex Workflow</h3>
+            <div class="block-list">
+                🚀 When App Starts<br>
+                ├─ 📦 Set variable "x" to 10<br>
+                ├─ 💬 Display "Starting..."<br>
+                ├─ ⏱️ Wait for 1 second<br>
+                ├─ 🔄 Transform x (multiply by 2)<br>
+                ├─ 🔀 If x > 15<br>
+                │&nbsp;&nbsp;├─ Then: 💬 Display "x is large"<br>
+                │&nbsp;&nbsp;└─ Else: 💬 Display "x is small"<br>
+                └─ 💬 Display x
+            </div>
+            <div class="output">Output: Starting... (wait) x is large, 20</div>
+        </div>
+
+        <h2>🎯 Tips & Tricks</h2>
+        <ul>
+            <li>Always start with the <strong>🚀 When App Starts</strong> block</li>
+            <li>Connect blocks in sequence from top to bottom</li>
+            <li>Use the <strong>value blocks</strong> (number, text, variable) in input fields</li>
+            <li>Variable names can contain letters, numbers, and underscores</li>
+            <li>The <strong>Delay block</strong> supports async operations</li>
+            <li>Use <strong>Condition blocks</strong> for branching logic</li>
+            <li>Click <strong>Clear</strong> to reset everything and start fresh</li>
+        </ul>
+
+        <div class="note">
+            <strong>💡 Pro Tip:</strong> Generate code frequently to see what JavaScript is being created. This helps you learn programming concepts!
+        </div>
+
+        <h2>🔒 Safety Features</h2>
+        <ul>
+            <li><strong>No eval():</strong> Uses AsyncFunction for safe code execution</li>
+            <li><strong>Input Validation:</strong> Variable names are automatically sanitized</li>
+            <li><strong>Error Handling:</strong> Graceful error messages if something goes wrong</li>
+            <li><strong>Output Capture:</strong> All results are safely captured and displayed</li>
+        </ul>
+
+        <a href="index.html" class="btn">🚀 Launch FlowForge</a>
+
+        <p style="text-align: center; color: #999; margin-top: 40px;">
+            Built with ❤️ using Blockly<br>
+            No installation required • Pure HTML/CSS/JavaScript
+        </p>
+    </div>
+</body>
+</html>
